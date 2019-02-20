@@ -23,8 +23,9 @@ public class FactorialTest {
         Factorial.factorialMethod(0);
     }
 
-    @Test
+    @Test(expected = RuntimeException.class)
     public void whenCalculatingFactorialBigInteger() {
-        assertEquals(1409236455, Factorial.factorialMethod(25));
+        Factorial.factorialMethod(25);
+        //assertEquals(1409236455, Factorial.factorialMethod(25));
     }
 }
