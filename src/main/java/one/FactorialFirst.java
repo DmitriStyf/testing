@@ -1,6 +1,6 @@
 package one;
 
-public class Factorial {
+public class FactorialFirst {
 
     public static void main(String[] args) {
         System.out.println(factorialMethod(5));

@@ -10,51 +10,62 @@ public class FizzBuzzerTest {
     public void whenNumber1ThenFizzBuzzer1() {
         int input = 1;
         String expected = FizzBuzzer.getValue(input);
-        assertEquals(expected,"1");
+        assertEquals(expected, "1");
     }
 
     @Test
     public void whenNumber2ThenFizzBuzzer2() {
         int input = 2;
         String expected = FizzBuzzer.getValue(input);
-        assertEquals(expected,"2");
+        assertEquals(expected, "2");
     }
 
     @Test
     public void whenNumber3ThenFizzBuzzerFizz() {
         int input = 3;
         String expected = FizzBuzzer.getValue(input);
-        assertEquals(expected,"Fizz");
+        assertEquals(expected, "Fizz");
     }
 
     @Test
     public void whenNumber5ThenFizzBuzzerBuzz() {
         int input = 5;
         String expected = FizzBuzzer.getValue(input);
-        assertEquals(expected,"Buzz");
+        assertEquals(expected, "Buzz");
     }
 
     @Test
     public void whenNumber6ThenFizzBuzzerFizz() {
         int input = 6;
         String expected = FizzBuzzer.getValue(input);
-        assertEquals(expected,"Fizz");
+        assertEquals(expected, "Fizz");
     }
 
     @Test
     public void whenNumber10ThenFizzBuzzerBuzz() {
         int input = 10;
         String expected = FizzBuzzer.getValue(input);
-        assertEquals(expected,"Buzz");
+        assertEquals(expected, "Buzz");
     }
 
     @Test
     public void whenNumber15ThenFizzBuzzerFizzBuzz() {
         int input = 15;
         String expected = FizzBuzzer.getValue(input);
-        assertEquals(expected,"FizzBuzz");
+        assertEquals(expected, "FizzBuzz");
     }
 
+    @Test(expected = RuntimeException.class)
+    public void whenNumberLessThan1ThenThrowsException() {
+        int input = 0;
+        String expected = FizzBuzzer.getValue(input);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void whenNumberGreaterThan100ThenThrowsException() {
+        int input = 101;
+        String expected = FizzBuzzer.getValue(input);
+    }
 
 
 }
